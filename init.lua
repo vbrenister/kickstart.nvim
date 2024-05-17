@@ -1,6 +1,4 @@
--- Include core modules
 require 'kickstart.core'
--- Include lazy dependency manager
 require 'kickstart.lazy'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
