@@ -9,6 +9,14 @@ return {
     local starter = require 'mini.starter'
     starter.setup {
       header = 'Welcome to NeoVIM',
+      footer = [[
+Type query to filter items
+<BS> deletes latest character from query
+<Esc> resets current query
+<Down/Up>, <C-n/p>, <M-j/k> move current item
+<CR> executes action of current item
+<\> open file explorer
+<C-c> closes this buffer]],
     }
 
     local files = require 'mini.files'
