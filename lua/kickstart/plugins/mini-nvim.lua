@@ -19,13 +19,6 @@ Type query to filter items
 <C-c> closes this buffer]],
     }
 
-    local files = require 'mini.files'
-    files.setup()
-
-    vim.keymap.set('n', '\\', function()
-      files.open()
-    end, { noremap = true })
-
     local statusline = require 'mini.statusline'
     statusline.setup { use_icons = vim.g.have_nerd_font }
 
