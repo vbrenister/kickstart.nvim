@@ -9,6 +9,13 @@ return {
     require('mini.sessions').setup()
     require('mini.tabline').setup()
 
+    local files = require 'mini.files'
+    files.setup()
+
+    vim.keymap.set('n', '\\', function()
+      files.open()
+    end, { noremap = true })
+
     local starter = require 'mini.starter'
     starter.setup {
       header = 'Welcome to NeoVIM',
