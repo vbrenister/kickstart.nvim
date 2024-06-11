@@ -4,21 +4,14 @@
 
 This is personalised fork of [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 
-The main differences are: 
-1. Options, keymaps and plugins are modularized
-2. Metals included for Scala development
-3. Included Greeter 
-4. Included LazyGit
-
+This configuration is split into multiple files:
+1. `kickstart/core` - Core directory containing main mappings and configurations
+2. `kickstart/plugins` - Plugin directory containing plugin configurations
+3. `init.lua` - Main entry point for the configuration
 
 ## Installation
 
 ### Install Neovim
-
-Kickstart.nvim targets *only* the latest
-['stable'](https://github.com/neovim/neovim/releases/tag/stable) and latest
-['nightly'](https://github.com/neovim/neovim/releases/tag/nightly) of Neovim.
-If you are experiencing issues, please make sure you have the latest versions.
 
 ### Install External Dependencies
 

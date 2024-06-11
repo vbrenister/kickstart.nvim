@@ -7,6 +7,7 @@ return {
     require('mini.pairs').setup()
     require('mini.notify').setup()
     require('mini.sessions').setup()
+    require('mini.tabline').setup()
 
     local starter = require 'mini.starter'
     starter.setup {
