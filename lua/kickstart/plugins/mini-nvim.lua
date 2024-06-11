@@ -5,6 +5,8 @@ return {
     require('mini.surround').setup()
     require('mini.jump').setup()
     require('mini.pairs').setup()
+    require('mini.notify').setup()
+    require('mini.sessions').setup()
 
     local starter = require 'mini.starter'
     starter.setup {
