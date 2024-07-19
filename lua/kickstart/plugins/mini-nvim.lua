@@ -16,8 +16,7 @@ return {
       files.open()
     end, { noremap = true })
 
-    local starter = require 'mini.starter'
-    starter.setup {
+    require('mini.starter').setup {
       header = 'Welcome to NeoVIM',
       footer = [[
 Type query to filter items
