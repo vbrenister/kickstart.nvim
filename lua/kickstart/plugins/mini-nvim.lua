@@ -5,9 +5,9 @@ return {
     require('mini.surround').setup()
     require('mini.jump').setup()
     require('mini.pairs').setup()
-    require('mini.notify').setup()
     require('mini.sessions').setup()
     require('mini.tabline').setup()
+    require('mini.icons').setup()
 
     local files = require 'mini.files'
     files.setup()
