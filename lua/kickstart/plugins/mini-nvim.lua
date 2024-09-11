@@ -8,6 +8,15 @@ return {
     require('mini.sessions').setup()
     require('mini.tabline').setup()
     require('mini.icons').setup()
+    require('mini.bracketed').setup()
+    require('mini.cursorword').setup()
+
+    local bufremove = require 'mini.bufremove'
+    bufremove.setup()
+
+    vim.keymap.set('n', '<leader>bd', function()
+      bufremove.delete()
+    end, { noremap = true, desc = '[D]elete [B]uffer' })
 
     local files = require 'mini.files'
     files.setup()
