@@ -18,6 +18,20 @@ return {
       bufremove.delete()
     end, { noremap = true, desc = '[D]elete [B]uffer' })
 
+    vim.keymap.set('n', '<leader>bD', function()
+      for _, id in ipairs(vim.api.nvim_list_bufs()) do
+        bufremove.delete(id)
+      end
+    end, { noremap = true, desc = '[D]elete All [B]uffers' })
+
+    vim.keymap.set('n', '<leader>bc', function()
+      for _, id in ipairs(vim.api.nvim_list_bufs()) do
+        if id ~= vim.api.nvim_get_current_buf() then
+          bufremove.delete(id)
+        end
+      end
+    end, { noremap = true, desc = '[D]elete All Buffers except [C]urrent' })
+
     local files = require 'mini.files'
     files.setup()
 
